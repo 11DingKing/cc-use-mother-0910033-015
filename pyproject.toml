@@ -4,3 +4,13 @@ version = "0.1.0"
 description = "变更通知投递箱的领域约定与校验工具"
 requires-python = ">=3.11"
 dependencies = []
+
+[project.scripts]
+notification-outbox = "notification_outbox.cli:main"
+
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools.packages.find]
+where = ["src"]
