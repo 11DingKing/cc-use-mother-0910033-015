@@ -1,6 +1,12 @@
 [project]
 name = "domain-contract-0910033-015"
-version = "0.1.0"
-description = "变更通知投递箱的领域约定与校验工具"
+version = "0.2.0"
+description = "变更通知投递箱：事务写入、租约认领、接收方幂等与失败重投审计的 Python 后端"
 requires-python = ">=3.11"
 dependencies = []
+
+[project.scripts]
+notification-outbox = "notification_outbox.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
